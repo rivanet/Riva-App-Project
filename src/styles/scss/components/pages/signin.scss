@@ -1,0 +1,153 @@
+.signin-social-media {
+    background-color: #fff;
+    width: 96%;
+    border: 5px outset #fff;
+    border-radius: 10px;
+    align-items: center;
+    height: 45px;
+    margin-top: 50px;
+    .social-media-grid {
+        display: flex;
+        margin-top: 3px;
+        list-style: none;
+        padding-left: 0px;
+        justify-content: space-around;
+
+        li {
+            margin-right: 10px;
+            padding-right: 5.5px;
+            padding-left: 0px;
+        }
+      
+        .social-icon-bar {
+            width: 2px;
+            height: 15px;
+            margin-top: 5px;
+            background-color: rgba($color: #000000, $alpha: 0.15000000596046448);
+        }
+    }
+}
+.signin-footer {
+    color: #fff;
+    width: 100%;
+
+    .signin-footer-text {
+        margin-bottom: 10px;
+        h6 {
+            margin-bottom: 0px;
+            text-align: center;
+        }
+    }
+}
+
+.signin-header {
+    img {
+        display:flex;
+        justify-content:center;
+        height: auto !important;
+        width: 100% !important;
+    }
+}
+
+.signin-button {
+    margin-top: 20%;
+    text-align: center;
+    cursor: pointer;
+    img {
+        height: 75px !important;
+        width: 131px !important;
+        border: 1px inset lightskyblue;
+    }
+}
+.login-heading {
+    font-family: 'Poppins', sans-serif;
+}
+.login-bottom1{
+    font-family: "Poppins";
+    opacity: 0.25;
+    text-decoration: "none";
+    color: "#fff";
+}
+
+.sign-footer-bottom{
+    opacity: 0.25;
+    font-family: "Poppins";
+    color: "#fff";
+    font-size: 14px;
+}
+.signin-footer-bottom-right{
+    cursor: "pointer";
+    text-decoration: underline;
+    font-size: 14px;
+    font-family: "Poppins";
+
+}
+.main-grid {
+    position: relative;
+    z-index: 3000;
+}
+
+.animation-bar {
+    position: absolute;
+    margin-top: -100px;
+    margin-left: 700px !important;
+    background-color: #0f161e;
+    z-index: 500000;
+    width: 100vw;
+    height: 0;
+    animation: animationBar 0.5s;
+    .animation-logo-image {
+        img {
+            animation: animationLogoImg 0.7s;
+            height: 80px !important;
+            width: 230px !important;
+        }
+    }
+}
+
+@keyframes animationBar {
+    0% {
+        position: relative;
+        height: 30px;
+        width: 100vw;
+        margin-top: 100px;
+        margin-bottom: 200px;
+    }
+    100% {
+        position: relative;
+        margin-bottom: 100px;
+        height: 0;
+        width: 100vw;
+        margin-top: -100px;
+    }
+}
+
+@keyframes animationLogoImg {
+    0% {
+        position: fixed;
+        top: 100px;
+        margin-left: -55px;
+        margin-top: 0;
+    }
+    100% {
+        margin-left: -55px;
+        position: fixed;
+        top: 430px;
+        margin-top: -750px;
+    }
+}
+
+.signin-input {
+    color: #fff !important;
+    width: 100%;
+    margin-top: 5px;
+    height: 50px;
+    
+    background-color: rgba($color: #fff, $alpha: 0.029999999329447746);
+}
+
+.signin-letter-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}

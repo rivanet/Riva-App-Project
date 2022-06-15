@@ -1,0 +1,291 @@
+.chart {
+    background-color: rgba(55, 88, 255, 0.25) ;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    display: block;
+    height: 8px;
+    margin-left: 2% !important;
+    margin-top: calc(100vh - 330px);
+    margin-bottom: 90px;
+    width: 75%;
+}
+
+#value1 {
+    position: absolute;
+    color: rgba($color: #fff, $alpha: 0.55);
+    margin-top: -30px;
+    opacity: 0.7;
+    font-family: Poppins, sans-serif;
+    font-size: medium;
+}
+
+.chart span {
+    margin-left: 5px;
+    color: #fff;
+    font-weight: bolder;
+
+}
+.animated-bar {
+    animation: load 10s normal forwards;
+    @extend .bar;
+}
+.bar {
+    box-shadow: 0 10px 40px -10px #fff;
+    background: linear-gradient(to right, #3758ff, #28b5f4);
+    height: 7px;
+    opacity: 1;
+    width: 0;
+}
+
+@keyframes load {
+    0% {
+        width: 0;
+    }
+    100% {
+        /* You need to change the percentage below to match the value in the corresponding <span> */
+        width: 100%;
+    }
+}
+
+.loading-screen-footer {
+    height: 170px;
+    margin-top: -85px;
+    background-color:rgba(20, 20, 20, 0.7);
+    width: 100%;
+    margin-bottom: -25px;
+    p {
+        color: #fff;
+    }
+    .loading-screen-user-info {
+        font-family: poppins;
+        position: absolute;
+        margin-left: 1225px;
+        margin-top: -22px;
+        z-index: 1;
+
+        p {
+            color: rgba($color: #fff, $alpha: 0.8);
+            margin-top: -13px;
+        }
+        span {
+            color: #fff;
+            font-weight: bold !important;
+        }
+    }
+}
+
+.loading-screen-button {
+    text-decoration: none;
+    color: #fff;
+    background-image: linear-gradient(to right, #28b5f4, #3758ff);
+    margin: 20px 40px;
+    z-index: 999;
+    border: none;
+    height: 4.94rem;
+    width: 14.9rem;
+    border-radius: 17px;
+    cursor: pointer;
+    font-family: Supercell-magic;
+    font-size: 20px;
+    display: inline-block;
+    padding: 15px 25px;
+    outline: none;
+    box-shadow: 5px 5px transparent, 10px 10px #1e2752;
+    transform: translateY(0px) scale(1);
+    transition: transform 0.3s;
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        bottom: -10px;
+        left: 0%;
+        height: 110%;
+        width: 100%;
+        opacity: 0;
+        border-radius: 50px;
+        
+        /* Declaring our shadow color inherit from the parent (button) */
+        background: inherit;
+        
+        /* Blurring the element for shadow effect */
+        -webkit-filter: blur(6px);
+        -moz-filter: blur(6px);
+        -o-filter: blur(6px);
+        -ms-filter: blur(6px);
+        filter: blur(6px);
+        
+        /* Transition for the magic */
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+    &:hover::after {
+        -webkit-filter: blur(10px);
+        opacity: 0.9;
+        -moz-filter: blur(10px);
+        -o-filter: blur(10px);
+        -ms-filter: blur(10px);
+        filter: blur(10px);
+        box-shadow: 0 5px #1e2752;
+        transform: translateY(4px) scale(1.02);
+    }
+    &:hover {
+        box-shadow: 0 5px #1e2752;
+        transform: translateY(4px) scale(1.02);
+    }
+}
+.loading-screen-logo-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.loading-screen-logo {
+    position: absolute;
+    top: 20px;
+    img {
+        height: 70px !important;
+        width: 125px !important;
+    }
+}
+.loading-screen-button-border {
+    height: 4.94rem;
+    width: 14.9rem;
+    border-radius: 17px;
+    margin-left: 43px;
+    margin-top: 45px;
+    border-bottom: 4.5px inset rgba(55, 88, 255, 0.25);
+    border-right: 4.5px inset rgba(55, 88, 255, 0.25);
+
+    // border-image-source: linear-gradient(to right, #28b5f4, #3758ff );
+    position: absolute;
+    cursor: pointer;
+    background-image: -webkit-gradient(linear, left, right, color-stop(1, #28b5f4, color-stop(1, #3758ff)));
+}
+.loading-screen-image {
+    margin-top: -241px;
+    margin-left: calc(100% - 280px);
+    .loading-screen-user-info {
+        font-family: 'Poppins', sans-serif;
+        color: white;
+        position: absolute;
+        margin-top: -105px;
+        margin-left: 50px;
+    }
+
+    img {
+        width: 240px;
+        height: 120px;
+    }
+}
+.loading-screen-image-shadow {
+    position: absolute;
+    margin-top: 684px;
+    opacity: 0.3;
+    margin-left: 80%;
+    width: 240px;
+    height: 120px;
+}
+.copyright {
+    font-family: 'Poppins', sans-serif;
+    margin-right: -180px;
+    margin-left: -45px;
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-top: -43px;
+    text-align: center;
+    img {
+        margin-left: -45px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        top: 10px;
+        width: 175px;
+        height: 175px;
+    }
+}
+
+.launcher-user {
+    height: 100px;
+    width: 240px;
+    margin-top: 2%;
+    margin-left: 2%;
+    border-radius: 25px;
+    background-color: #10171f;
+    display: flex;
+    p {
+        margin-top: 11%;
+        color: #fff;
+        font-size: x-small;
+        span {
+            font-size: large;
+        }
+    }
+}
+
+.second-page-container {
+    top: 100vh;
+    width: 100vw;
+}
+
+.loading-screen-scroll {
+    overflow-y: scroll;
+}
+
+.loading-screen-container {
+    top: 0;
+    width: 100vw;
+    -webkt-app-region:drag;
+}
+.loading-screen-container-up {
+    top: 0;
+    margin-top: 0;
+    animation: moveUp 1s;
+    width: 100vw;
+}
+
+.loading-screen-container-down {
+    top: 0;
+    margin-top: -100vh;
+    animation: moveDown 1s;
+    width: 100vw;
+}
+
+.slide-below {
+    opacity: 0;
+    animation: slide-below 0.5s ease-in-out;
+}
+
+@keyframes slide-below {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes moveDown {
+    0% {
+        margin-top: 0;
+    }
+    100% {
+        margin-top: -100vh;
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        margin-top: -100vh;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+.luancher-text {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+}

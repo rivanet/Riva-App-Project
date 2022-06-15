@@ -1,1 +1,1 @@
-# Riva-App-Project
+# RivaAppProject

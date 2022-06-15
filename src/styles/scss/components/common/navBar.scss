@@ -1,0 +1,114 @@
+.navbar-button {
+    text-decoration: none;
+    color: #fff;
+    background-image: linear-gradient(to right, #28b5f4, #3758ff);
+    margin: 20px 40px;
+    z-index: 999;
+    border: none;
+    height: 4.94rem;
+    width: 14.9rem;
+    border-radius: 17px;
+    cursor: pointer;
+    font-family: Supercell-magic;
+    font-size: 20px;
+    display: inline-block;
+    padding: 15px 25px;
+    outline: none;
+    box-shadow: 5px 5px transparent, 10px 10px #1e2752;
+    transform: translateY(0px) scale(1);
+    transition: transform 0.3s;
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        bottom: -5px;
+        left: 0%;
+        height: 110%;
+        width: 100%;
+        opacity: 0;
+        border-radius: 50px;
+        
+        /* Declaring our shadow color inherit from the parent (button) */
+        background: inherit;
+        
+        /* Blurring the element for shadow effect */
+        -webkit-filter: blur(6px);
+        -moz-filter: blur(6px);
+        -o-filter: blur(6px);
+        -ms-filter: blur(6px);
+        filter: blur(6px);
+        
+        /* Transition for the magic */
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+    &:hover::after {
+        -webkit-filter: blur(10px);
+        opacity: 0.9;
+        -moz-filter: blur(10px);
+        -o-filter: blur(10px);
+        -ms-filter: blur(10px);
+        filter: blur(10px);
+        box-shadow: 0 5px #1e2752;
+        transform: translateY(4px) scale(1.02);
+    }
+    &:hover {
+        box-shadow: 0 5px #1e2752;
+        transform: translateY(4px) scale(1.02);
+    }
+}
+#navbar{
+    scroll-behavior: smooth;
+   
+}
+.smooth-image {
+    transition: opacity 1s;
+  }
+  .image-visible {
+    opacity: 1;
+  }
+  .image-hidden {
+    opacity: 0;
+  }
+  .navbar-visible {
+    top: 0;
+    animation: moveDown 0.5s ease-in-out;
+  }
+
+@keyframes moveDown {
+    from{
+        transform: translateY(-30px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+  .navbar-hidden {
+    background:transparent;
+  }
+.navbar-container {
+    position: absolute;
+    z-index: 5000;
+    width: 100%;
+}
+.navbar-logo {
+    margin-left: 300px !important;
+    margin-top: 25px !important;
+    img {
+        height: 70px !important;
+        width: 125px !important;
+    }
+}
+.navbar-button-border {
+    height: 4.94rem;
+    width: 14.9rem;
+    border-radius: 17px;
+    margin-top: 53px;
+    margin-left: 55px;
+    // border: 1px inset #3758ff;
+    // border-image-source: linear-gradient(to right, #28b5f4, #3758ff );
+    position: absolute;
+    cursor: pointer;
+    background-image: -webkit-gradient(linear, left, right, color-stop(1, #28b5f4, color-stop(1, #3758ff)));
+}

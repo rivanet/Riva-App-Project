@@ -1,0 +1,21 @@
+.app-bar-settings {
+    margin-top: 22px;
+    margin-right: 34px;
+    position: absolute;
+    z-index: 500003;
+    color: #fff !important;
+    border-color: rgba($color: #fff, $alpha: 0.25) !important;
+    right: -2px;
+    top: 30px;
+    cursor: pointer;
+    border: 1px outset #fff;
+    border-radius: 15px;
+
+    
+}
+
+.app-bar-menu{
+    position: absolute;
+    margin-top: 1px;
+    margin-left: -17px;
+}
